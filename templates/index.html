@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flask in Docker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <div class="badge">Running</div>
+        <h1>Flask App inside Docker</h1>
+        <p class="subtitle">
+          Your container is up. Edit <code>templates/index.html</code> and <code>static/styles.css</code>.
+        </p>
+      </header>
+
+      <section class="card-grid">
+        <article class="card">
+          <h2>Route</h2>
+          <p><code>/</code> serves this page.</p>
+        </article>
+
+        <article class="card">
+          <h2>Health</h2>
+          <p><code>/health</code> returns JSON status.</p>
+          <a class="btn" href="/health" target="_blank" rel="noreferrer">Open /health</a>
+        </article>
+
+        <article class="card">
+          <h2>Next</h2>
+          <p>Replace this UI with your own page and components.</p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>© {{ 2026 }}</span>
+        <span class="dot">•</span>
+        <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">Flask Docs</a>
+      </footer>
+    </main>
+  </body>
+</html>
